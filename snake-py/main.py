@@ -20,7 +20,7 @@ SNAKE_SQUARE_SIZE = 12
 FOOD_SIZE = 12
 
 GREEN = (0, 255, 0)
-RED = (255, 0 ,0)
+RED = (255, 0, 0)
 BLACK = (0, 0, 0)
 
 BLANK_COLOR = BLACK
@@ -121,7 +121,7 @@ def game_over(screen):
 	screen.blit(text, rect)
 
 class Snake:
-	def __init__(self, screen):
+	def __init__(self):
 		self.direct = Direct.RIGHT
 		self.body = deque()
 
@@ -175,7 +175,7 @@ screen = pygame.display.set_mode((GAME_WIDTH,GAME_HEIGHT))
 pygame.display.set_caption('snake game')
 
 draw_background(screen)
-snake = Snake(screen)
+snake = Snake()
 
 s1 = Square(screen, (60,90))
 left = around(s1, Direct.LEFT)
